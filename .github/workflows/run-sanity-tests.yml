@@ -2,8 +2,7 @@ name: run sanity tests of feature branches
 
 on:
   push:
-     branches: 
-       'feature/*'
+     branches: [feature]
 
 jobs:
   run-sanity-test:
@@ -13,5 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         
-      - name: run-sanity-test
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
         run: npx playwright test
