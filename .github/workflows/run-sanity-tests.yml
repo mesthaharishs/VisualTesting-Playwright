@@ -1,8 +1,8 @@
 name: run sanity tests of feature branches
 
 on:
-  schedule:
-  - cron: "10 23 * * *"
+  push:
+    branches: ['feature/*']
 
 
 jobs:
