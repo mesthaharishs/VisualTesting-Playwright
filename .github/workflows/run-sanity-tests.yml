@@ -2,7 +2,7 @@ name: run sanity tests of feature branches
 
 on:
   push:
-     branches: [feature]
+     branches: 'feature/*'
 
 jobs:
   run-sanity-test:
