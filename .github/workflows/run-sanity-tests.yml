@@ -2,7 +2,7 @@ name: run sanity tests of feature branches
 
 on:
   schedule:
-    - cron: "56 22 * * 1-5"
+    - cron: "02 23 * * 1-5"
 
 
 jobs:
