@@ -1,0 +1,17 @@
+name: run sanity tests of feature branches
+
+on:
+  push:
+     branches: 
+       'feature/*'
+
+jobs:
+  run-sanity-test:
+    runs-on:  ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        
+      - name: run-sanity-test
+        run: npx test
