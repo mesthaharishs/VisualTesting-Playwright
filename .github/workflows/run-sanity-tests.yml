@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v4.2.2
         
       - name: run-sanity-test
-        run: npx test
+        run: npx playwright test
