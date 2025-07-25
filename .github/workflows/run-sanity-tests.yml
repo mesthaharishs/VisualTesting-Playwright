@@ -1,10 +1,8 @@
 name: run sanity tests of feature branches
-
 on:
    schedule:
-   - cron: "* * * * *"
-
-
+      - cron: '* * * * *'
+   workflow_dispatch:
 jobs:
   run-sanity-test:
     runs-on:  ubuntu-latest
