@@ -1,8 +1,10 @@
 name: run sanity tests of feature branches
 
 on:
+  schedule:
+    - cron: "54 22 * * 1-5"
   push:
-     branches: 'feature/*'
+     branches: ['feature/*', master]
 
 jobs:
   run-sanity-test:
